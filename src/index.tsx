@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <a href="#main-content" className="skip-to-content">Skip to content</a>
     <App />
   </React.StrictMode>
 );
