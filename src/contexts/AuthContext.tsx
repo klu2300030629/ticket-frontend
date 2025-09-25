@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [state]);
 
   const login = async ({ email, password }: { email: string; password: string }) => {
-    const res = await fetch('http://localhost:8080/api/auth/login', {
+    const res = await fetch('http://52.91.141.5:7070/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -54,7 +54,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const signup = async ({ fullName, email, password, phone, role }: { fullName: string; email: string; password: string; phone?: string; role?: Role | string }) => {
-    const res = await fetch('http://localhost:8080/api/auth/register', {
+    const res = await fetch('http://52.91.141.5:7070/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ fullName, email, password, phone, role }),
