@@ -101,7 +101,7 @@ const CheckoutPage: React.FC = () => {
       };
 
       // Send booking request to backend
-      const response = await fetch('http://localhost:8080/api/user/bookings', {
+      const response = await fetch('http://52.91.141.5:7070/api/user/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
