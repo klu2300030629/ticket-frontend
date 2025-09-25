@@ -16,7 +16,7 @@ const EventDetailsPage: React.FC = () => {
     if (!id) return;
     (async () => {
       try {
-        const res = await fetch(`http://localhost:8080/api/events/public/${id}`);
+        const res = await fetch(`http://52.91.141.5:7070/api/events/public/${id}`);
         if (res.ok) {
           const e = await res.json();
           const mapped: Event = {
