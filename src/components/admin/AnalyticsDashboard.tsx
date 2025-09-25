@@ -63,7 +63,7 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({ events, users }
       
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8080/api/admin/bookings', {
+        const response = await fetch('http://52.91.141.5:7070/api/admin/bookings', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
