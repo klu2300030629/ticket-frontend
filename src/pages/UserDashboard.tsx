@@ -22,14 +22,14 @@ const UserDashboard: React.FC = () => {
     const load = async () => {
       try {
         // Fetch user details
-        const userRes = await fetch('http://localhost:8080/user/details', {
+        const userRes = await fetch('http://52.91.141.5:7070/user/details', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (userRes.ok) {
           const u = await userRes.json();
           setUser(u);
           // Fetch bookings for user
-          const bRes = await fetch(`http://localhost:8080/api/users/${u.id}/bookings`, {
+          const bRes = await fetch(`http://52.91.141.5:7070/api/users/${u.id}/bookings`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (bRes.ok) {
@@ -50,7 +50,7 @@ const UserDashboard: React.FC = () => {
           }
         }
         // Fetch events for mapping
-        const eRes = await fetch('http://localhost:8080/api/events');
+        const eRes = await fetch('http://52.91.141.5:7070/api/events');
         if (eRes.ok) {
           const data = await eRes.json();
           const mappedEvents: Event[] = (data || []).map((e: any) => ({
