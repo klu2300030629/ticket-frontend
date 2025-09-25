@@ -67,7 +67,7 @@ const EventManagement: React.FC<EventManagementProps> = ({
     try {
       if (editingEvent) {
         // Update existing event
-        const response = await fetch(`http://localhost:8080/api/admin/events/${editingEvent.id}`, {
+        const response = await fetch(`http://52.91.141.5:7070/api/admin/events/${editingEvent.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
