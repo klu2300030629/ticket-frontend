@@ -13,7 +13,7 @@ const FeaturedEvents: React.FC = () => {
     const fetchEvents = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8080/api/events/public');
+        const response = await fetch('http://52.91.141.5:7070/api/events/public');
         if (response.ok) {
           const data = await response.json();
           const mapped: Event[] = (data || []).map((e: any) => ({
