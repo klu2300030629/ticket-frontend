@@ -77,7 +77,7 @@ const AdminDashboard: React.FC = () => {
       
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8080/api/admin/users', {
+        const response = await fetch('http://52.91.141.5:7070/api/admin/users', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -106,7 +106,7 @@ const AdminDashboard: React.FC = () => {
       
       try {
         setEventsLoading(true);
-        const response = await fetch('http://localhost:8080/api/admin/events', {
+        const response = await fetch('http://52.91.141.5:7070/api/admin/events', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
