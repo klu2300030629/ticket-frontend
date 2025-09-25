@@ -13,7 +13,7 @@ const EventsPage: React.FC = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('http://localhost:8080/api/events/public');
+        const res = await fetch('http://52.91.141.5:7070/api/events/public');
         const data = await res.json();
         // Map backend EventResponse to frontend Event shape minimal
         const mapped: Event[] = (data || []).map((e: any) => ({
