@@ -37,7 +37,7 @@ const SeatSelectionPage: React.FC = () => {
       // Fetch event data if not provided in location state
       (async () => {
         try {
-          const res = await fetch(`http://localhost:8080/api/events/public/${id}`);
+          const res = await fetch(`http://52.91.141.5:7070/api/events/public/${id}`);
           if (res.ok) {
             const e = await res.json();
             const mapped: Event = {
@@ -72,7 +72,7 @@ const SeatSelectionPage: React.FC = () => {
     (async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:8080/api/events/${event.id}/seats`);
+        const res = await fetch(`http://52.91.141.5:7070/api/events/${event.id}/seats`);
         if (res.ok) {
           const seatsData = await res.json();
           setSeats(seatsData);
