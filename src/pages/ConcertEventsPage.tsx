@@ -11,7 +11,7 @@ const ConcertEventsPage: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
   useEffect(() => {
     (async () => {
-      const res = await fetch('http://localhost:8080/api/events');
+      const res = await fetch('http://52.91.141.5:7070/api/events');
       if (res.ok) {
         const data = await res.json();
         const mapped: Event[] = (data || []).map((e: any) => ({
